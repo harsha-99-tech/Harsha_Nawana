@@ -3,8 +3,10 @@ import "./Hero.css";
 import Header from "../Header/Header";
 import hero_image from "../../assets/hero_image.png";
 import hero_image_back from "../../assets/hero_image_back.png";
+import { motion } from "framer-motion";
 
 const Hero = () => {
+  const transition = { type: "spring", duration: 3 };
   return (
     <section>
       <div className="hero">
@@ -15,7 +17,11 @@ const Hero = () => {
 
           {/*The best add section*/}
           <div className="the-best-ad">
-            <div></div>
+            <motion.div
+              initial={{ left: "238px" }}
+              whileInView={{ left: "8px" }}
+              transition={{ ...transition, type: "tween" }}
+            ></motion.div>
             <span>the best developer at the field</span>
           </div>
 
@@ -63,7 +69,14 @@ const Hero = () => {
 
           {/* Hero Image */}
           <img src={hero_image} alt="" className="hero-image" />
-          <img src={hero_image_back} alt="" className="hero-image-back" />
+          <motion.img
+            initial={{ right: "11rem" }}
+            whileInView={{ right: "25rem" }}
+            transition={transition}
+            src={hero_image_back}
+            alt=""
+            className="hero-image-back"
+          />
         </div>
       </div>
     </section>
