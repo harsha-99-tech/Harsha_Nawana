@@ -1,0 +1,94 @@
+.contact {
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 4rem 10rem;
+  gap: 4rem;
+  position: relative;
+}
+
+.contact-title {
+  display: flex;
+  gap: 3rem;
+  font-weight: bold;
+  font-size: 3rem;
+  color: white;
+  text-transform: uppercase;
+  font-style: italic;
+}
+
+.contact-section {
+  display: flex;
+  gap: 8rem;
+}
+
+.contact-l {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.contact-l > span:nth-child(1) {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--orange);
+}
+
+.contact-l > span:nth-child(2) {
+  min-width: 30rem;
+  color: var(--lightgray);
+  font-size: 1rem;
+  line-height: 2rem;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  color: var(--lightgray);
+  font-size: 1rem;
+}
+
+.contact-detail {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.contact-r {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 1.5rem;
+}
+
+.contact-r > label {
+  color: var(--lightgray);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.contact-r > input {
+  border: none;
+  width: 43rem;
+  height: 4rem;
+  padding-left: 1rem;
+  border-radius: 4px;
+  background: #32323c;
+  color: #a0a0a0;
+  font-family: Outfit;
+  font-size: 1rem;
+}
+
+.contact-r > textarea {
+  width: 40rem;
+  border: none;
+  padding: 2rem;
+  border-radius: 4px;
+  background: #32323c;
+  color: #a0a0a0;
+  font-family: Outfit;
+  font-size: 1rem;
+}

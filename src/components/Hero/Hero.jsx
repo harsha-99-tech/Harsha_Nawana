@@ -8,6 +8,7 @@ const Hero = () => {
   return (
     <section>
       <div className="hero">
+        <div className="blur blur-h"></div>
         {/* Left Side */}
         <div className="left-h">
           <Header />
@@ -15,7 +16,7 @@ const Hero = () => {
           {/*The best add section*/}
           <div className="the-best-ad">
             <div></div>
-            <span>the best fitness club in the town</span>
+            <span>the best developer at the field</span>
           </div>
 
           {/*Heading*/}

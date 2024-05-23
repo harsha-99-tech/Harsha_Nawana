@@ -15,7 +15,7 @@
   background-color: var(--appColor);
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 4rem;
   overflow: hidden;
 }
 ::-webkit-scrollbar {
@@ -42,4 +42,12 @@
 
 .btn:hover {
   cursor: pointer;
+}
+
+.blur {
+  background: rgba(253, 120, 43, 0.69);
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(150px);
+  z-index: -9;
 }

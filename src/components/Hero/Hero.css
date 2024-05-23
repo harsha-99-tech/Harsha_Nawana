@@ -133,3 +133,9 @@ section {
   z-index: -1;
   width: 15rem;
 }
+
+.blur-h {
+  width: 22rem;
+  height: 30rem;
+  left: 0;
+}
