@@ -5,7 +5,7 @@ import whiteTick from "../../assets/whiteTick.png";
 
 const Services = () => {
   return (
-    <div className="services-container">
+    <div className="services-container" id="services">
       <div className="blur blur-s-1"></div>
       <div className="blur blur-s-2"></div>
       <div className="programs-header">

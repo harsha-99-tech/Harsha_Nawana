@@ -2,10 +2,12 @@ import "./App.css";
 import About from "./components/About/About";
 import Hero from "./components/Hero/Hero";
 import Reasons from "./components/Reasons/Reasons";
-import Services from "./components/Services/Services";
-import Projects from "./components/Projects/Project";
 import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
+import ProjectsApp from "./components/Projects/ProjectA";
+import ProjectsWeb from "./components/Projects/ProjectW";
+import ProjectsUi from "./components/Projects/ProjectU";
+import ProjectsGraphic from "./components/Projects/ProjectG";
 
 function App() {
   return (
@@ -13,8 +15,10 @@ function App() {
       <Hero />
       <About />
       <Reasons />
-      <Services />
-      <Projects />
+      <ProjectsApp />
+      <ProjectsWeb />
+      <ProjectsUi />
+      <ProjectsGraphic />
       <Contact />
       <Footer />
     </div>

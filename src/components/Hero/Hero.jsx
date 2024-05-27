@@ -4,12 +4,16 @@ import Header from "../Header/Header";
 import hero_image from "../../assets/hero_image.png";
 import hero_image_back from "../../assets/hero_image_back.png";
 import { motion } from "framer-motion";
+import CountUp from "react-countup";
+import { Link } from "react-scroll";
 
 const Hero = () => {
   const transition = { type: "spring", duration: 3 };
+
+  const mobile = window.innerWidth <= 768 ? true : false;
   return (
     <section>
-      <div className="hero">
+      <div className="hero" id="home">
         <div className="blur blur-h"></div>
         {/* Left Side */}
         <div className="left-h">
@@ -18,7 +22,7 @@ const Hero = () => {
           {/*The best add section*/}
           <div className="the-best-ad">
             <motion.div
-              initial={{ left: "238px" }}
+              initial={{ left: mobile ? "165px" : "238px" }}
               whileInView={{ left: "8px" }}
               transition={{ ...transition, type: "tween" }}
             ></motion.div>
@@ -43,29 +47,41 @@ const Hero = () => {
           {/* Figures */}
           <div className="figures">
             <div>
-              <span>+10</span>
+              <span>
+                <CountUp end={10} start={0} prefix="+" />
+              </span>
               <span>Web Sites</span>
             </div>
             <div>
-              <span>+4</span>
+              <span>
+                <CountUp end={4} start={0} prefix="+" />
+              </span>
               <span>Apps</span>
             </div>
             <div>
-              <span>+25</span>
+              <span>
+                <CountUp end={25} start={0} prefix="+" />
+              </span>
               <span>Graphic Designs</span>
             </div>
           </div>
 
           {/* Hero Buttons */}
           <div className="hero-buttons">
-            <buttons className="btn">Contact Me</buttons>
-            <buttons className="btn">See More</buttons>
+            <Link to="contact-us" smooth={true} duration={500} className="btn">
+              Contact Me
+            </Link>
+            <Link to="about" smooth={true} duration={500} className="btn">
+              See More
+            </Link>
           </div>
         </div>
 
         {/* Right Side */}
         <div className="right-h">
-          <button className="btn">Contact Me</button>
+          <Link to="contact" smooth={true} duration={500} className="btn">
+            Contact Me
+          </Link>
 
           {/* Hero Image */}
           <img src={hero_image} alt="" className="hero-image" />

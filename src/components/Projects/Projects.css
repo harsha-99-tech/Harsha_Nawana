@@ -1,7 +1,7 @@
 .projects {
   display: flex;
   gap: 1rem;
-  padding: 0 2rem;
+  padding: 0rem 2rem;
 }
 
 .left-p {
@@ -79,4 +79,40 @@
 .arrows > img {
   width: 1.5rem;
   cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .projects {
+    flex-direction: column;
+    padding: 2rem;
+  }
+  .left-p > :nth-child(2),
+  .left-p > :nth-child(3) {
+    font-size: xx-large;
+  }
+  .right-p {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+  .right-p > div {
+    position: relative;
+    display: none;
+  }
+  .right-p > img {
+    top: 0;
+    right: 0;
+    position: relative;
+    align-self: center;
+  }
+  .right-p > :last-child {
+    display: block;
+    bottom: 0;
+    left: 0;
+  }
+  .arrows > img {
+    padding: 8px;
+  }
 }

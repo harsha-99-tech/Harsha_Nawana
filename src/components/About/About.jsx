@@ -5,7 +5,7 @@ import RightArrow from "../../assets/rightArrow.png";
 
 const About = () => {
   return (
-    <div className="Programs" id="programs">
+    <div className="Programs" id="about">
       {/* Header */}
       <div className="programs-header">
         <span className="stroke-text">Learn</span>

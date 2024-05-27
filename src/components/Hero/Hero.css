@@ -1,6 +1,3 @@
-section {
-  height: 100vh;
-}
 .hero {
   display: flex;
   justify-content: space-between;
@@ -138,4 +135,58 @@ section {
   width: 22rem;
   height: 30rem;
   left: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+  }
+
+  .blur-h {
+    width: 14rem;
+  }
+
+  .the-best-ad {
+    margin-top: 0;
+    font-size: small;
+    align-self: center;
+    transform: scale(0.8);
+  }
+  .hero-text {
+    font-size: xx-large;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .hero-text > div:nth-of-type(2) {
+    font-size: small;
+    font-weight: 200;
+    letter-spacing: 1px;
+    text-align: center;
+  }
+  .hero-buttons {
+    justify-content: center;
+  }
+  .figures > div > span:nth-of-type(1) {
+    font-size: large;
+  }
+  .figures > div > span:nth-of-type(2) {
+    font-size: small;
+  }
+  .right-h {
+    position: relative;
+    background: none;
+  }
+  .hero-image {
+    position: relative;
+    width: 18rem;
+    left: 4rem;
+    top: 5rem;
+    align-self: center;
+  }
+  .hero-image-back {
+    width: 10rem;
+    left: 3rem;
+    top: 5rem;
+  }
 }

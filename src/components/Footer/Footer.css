@@ -48,3 +48,30 @@
   filter: blur(200px);
   background: rgb(255, 115, 0);
 }
+
+@media screen and (max-width: 768px) {
+  .footer {
+    padding: 1rem;
+    gap: 2rem;
+    height: auto;
+  }
+
+  .social-links {
+    gap: 2rem;
+  }
+
+  .social-links > img {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .logo-f > img {
+    width: 5rem;
+  }
+
+  .blur-f-1,
+  .blur-f-2 {
+    width: 20rem;
+    height: 10rem;
+  }
+}

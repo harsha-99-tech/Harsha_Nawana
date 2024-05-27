@@ -1,17 +1,17 @@
 import React, { useState } from "react";
-import "./Project.css";
+import "./Projects.css";
 import { projectsData } from "../../data/projectsData";
 import leftArrow from "../../assets/leftArrow.png";
 import rightArrow from "../../assets/rightArrow.png";
 import { motion } from "framer-motion";
 
-const Projects = () => {
+const ProjectsWeb = () => {
   const transition = { type: "spring", duration: 3 };
 
   const [selected, setSelected] = useState(0);
   const pLength = projectsData.length;
   return (
-    <div className="projects">
+    <div className="projects" id="portfolio">
       <div className="left-p">
         <span>{projectsData[selected].field}</span>
         <span className="stroke-text">Latest Projects</span>
@@ -75,4 +75,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default ProjectsWeb;

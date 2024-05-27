@@ -26,13 +26,13 @@ const Contact = () => {
   };
 
   return (
-    <div className="contact">
-      <div className="contact-title">
+    <div className="Contact" id="contact-us">
+      <div className="programs-header">
         <span className="stroke-text">Get in</span>
         <span>touch</span>
         <span className="stroke-text">with me</span>
       </div>
-      <div className="contact-section">
+      <div className="content">
         <div className="contact-l">
           <span>Let's talk</span>
           <span>
@@ -54,21 +54,23 @@ const Contact = () => {
             </div>
           </div>
         </div>
-        <form ref={form} onSubmit={sendEmail} className="contact-r">
-          <label htmlFor="">Your Name</label>
-          <input type="text" placeholder="Enter your name" name="name" />
-          <label htmlFor="">Your Email</label>
-          <input type="email" placeholder="Enter your email" name="email" />
-          <label htmlFor="">Write Your Message Here</label>
-          <textarea
-            name="message"
-            rows="8"
-            placeholder="Enter your message"
-          ></textarea>
-          <button type="submit" className="btn">
-            Submit Now
-          </button>
-        </form>
+        <div className="contact-r">
+          <form ref={form} onSubmit={sendEmail} className="contact-r">
+            <label htmlFor="">Your Name</label>
+            <input type="text" placeholder="Enter your name" name="name" />
+            <label htmlFor="">Your Email</label>
+            <input type="email" placeholder="Enter your email" name="email" />
+            <label htmlFor="">Write Your Message Here</label>
+            <textarea
+              name="message"
+              rows="8"
+              placeholder="Enter your message"
+            ></textarea>
+            <button type="submit" className="btn">
+              Submit Now
+            </button>
+          </form>
+        </div>
       </div>
     </div>
   );
