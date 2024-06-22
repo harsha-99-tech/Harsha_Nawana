@@ -11,9 +11,44 @@ const Footer = () => {
       <hr />
       <div className="footer">
         <div className="social-links">
-          <img src={Github} alt="" />
-          <img src={Instagram} alt="" />
-          <img src={Linkedin} alt="" />
+          <img
+            src={Github}
+            alt=""
+            onClick={() =>
+              (window.location.href = "https://github.com/harsha-99-tech")
+            }
+            style={{
+              cursor: "pointer",
+
+              textDecoration: "underline",
+            }}
+          />
+          <img
+            src={Instagram}
+            alt=""
+            onClick={() =>
+              (window.location.href =
+                "https://www.instagram.com/harsha_nawana/")
+            }
+            style={{
+              cursor: "pointer",
+
+              textDecoration: "underline",
+            }}
+          />
+          <img
+            src={Linkedin}
+            alt=""
+            onClick={() =>
+              (window.location.href =
+                "https://www.linkedin.com/in/harsha-nawana")
+            }
+            style={{
+              cursor: "pointer",
+
+              textDecoration: "underline",
+            }}
+          />
         </div>
         <div className="logo-f">
           <img src={Logo} alt="" />

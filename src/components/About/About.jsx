@@ -1,7 +1,8 @@
 import React from "react";
 import "./About.css";
-import { programsData } from "../../data/programsData";
+import { aboutData } from "../../data/aboutData";
 import RightArrow from "../../assets/rightArrow.png";
+import { Link } from "react-scroll";
 
 const About = () => {
   return (
@@ -14,15 +15,17 @@ const About = () => {
       </div>
 
       <div className="program-categories">
-        {programsData.map((program) => (
+        {aboutData.map((program) => (
           <div className="category">
             {program.image}
             <span>{program.heading}</span>
             <span>{program.details}</span>
-            <div className="projects-done">
-              <span>See projects</span>
-              <img src={RightArrow} alt="" />
-            </div>
+            <Link to={program.link} smooth={true} duration={500}>
+              <div className="projects-done">
+                <span>See projects</span>
+                <img src={RightArrow} alt="" />
+              </div>
+            </Link>
           </div>
         ))}
       </div>

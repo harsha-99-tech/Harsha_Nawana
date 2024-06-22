@@ -87,11 +87,12 @@
 
 .partners {
   display: flex;
-  gap: 1rem;
+  gap: 2rem;
 }
 
 .partners > img {
-  width: 2.5rem;
+  width: 2rem;
+  height: 2rem;
 }
 
 @media screen and (max-width: 768px) {

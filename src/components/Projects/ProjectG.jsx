@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Projects.css";
-import { projectsData } from "../../data/projectsData";
+import { graphicData } from "../../data/graphicData";
 import leftArrow from "../../assets/leftArrow.png";
 import rightArrow from "../../assets/rightArrow.png";
 import { motion } from "framer-motion";
@@ -9,11 +9,11 @@ const ProjectsGraphic = () => {
   const transition = { type: "spring", duration: 3 };
 
   const [selected, setSelected] = useState(0);
-  const pLength = projectsData.length;
+  const pLength = graphicData.length;
   return (
-    <div className="projects" id="portfolio">
+    <div className="projects" id="graphic">
       <div className="left-p">
-        <span>{projectsData[selected].field}</span>
+        <span>Graphic Design</span>
         <span className="stroke-text">Latest Projects</span>
         <span>Done by me</span>
         <motion.span
@@ -23,11 +23,11 @@ const ProjectsGraphic = () => {
           exit={{ opacity: 0, x: 100 }}
           transition={transition}
         >
-          {projectsData[selected].review}
+          {graphicData[selected].review}
         </motion.span>
         <span>
-          <span className="nme">{projectsData[selected].name}</span> -{" "}
-          {projectsData[selected].used}
+          <span className="nme">{graphicData[selected].name}</span> -{" "}
+          {graphicData[selected].used}
         </span>
       </div>
       <div className="right-p">
@@ -47,7 +47,7 @@ const ProjectsGraphic = () => {
           animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: -100 }}
           transition={{ transition }}
-          src={projectsData[selected].image}
+          src={graphicData[selected].image}
           alt=""
         />
         <div className="arrows">

@@ -4,9 +4,12 @@ import image1 from "../../assets/image1.png";
 import image2 from "../../assets/image2.png";
 import image3 from "../../assets/image3.png";
 import image4 from "../../assets/image4.jpg";
-import nb from "../../assets/nb.png";
-import adidas from "../../assets/adidas.png";
-import nike from "../../assets/nike.png";
+import ps from "../../assets/adobe-photoshop.512x512.png";
+import ai from "../../assets/adobe-illustrator.512x512.png";
+import word from "../../assets/ms-word.512x449.png";
+import excel from "../../assets/ms-excel.512x449.png";
+import pp from "../../assets/ms-powerpoint.512x463.png";
+import figma from "../../assets/figma.512x512.png";
 import tick from "../../assets/tick.png";
 
 const Reasons = () => {
@@ -45,14 +48,17 @@ const Reasons = () => {
           </div>
           <div>
             <img src={tick} alt="" />
-            <span>Skillfull worker with fast learning ability</span>
+            <span>Skillful worker with fast learning ability</span>
           </div>
         </div>
-        <span className="hbby">MY PARTNERS</span>
+        <span className="hbby">Softwares familiar with</span>
         <div className="partners">
-          <img src={nb} alt="" />
-          <img src={adidas} alt="" />
-          <img src={nike} alt="" />
+          <img src={ps} alt="" />
+          <img src={ai} alt="" />
+          <img src={word} alt="" />
+          <img src={excel} alt="" />
+          <img src={pp} alt="" />
+          <img src={figma} alt="" />
         </div>
       </div>
     </div>

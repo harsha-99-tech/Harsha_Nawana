@@ -52,27 +52,17 @@ const Header = () => {
           <li>
             <Link
               onClick={() => setMenuOpened(false)}
-              to="services"
+              to="projects"
               spy={true}
               smooth={true}
             >
-              Services
+              Projects
             </Link>
           </li>
           <li>
             <Link
               onClick={() => setMenuOpened(false)}
-              to="portfolio"
-              spy={true}
-              smooth={true}
-            >
-              Portfolio
-            </Link>
-          </li>
-          <li>
-            <Link
-              onClick={() => setMenuOpened(false)}
-              to="contact"
+              to="contact-us"
               spy={true}
               smooth={true}
             >

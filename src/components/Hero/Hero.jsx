@@ -79,7 +79,7 @@ const Hero = () => {
 
         {/* Right Side */}
         <div className="right-h">
-          <Link to="contact" smooth={true} duration={500} className="btn">
+          <Link to="contact-us" smooth={true} duration={500} className="btn">
             Contact Me
           </Link>
 
