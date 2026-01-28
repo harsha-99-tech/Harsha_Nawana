@@ -1,71 +1,292 @@
-# [Site is here](https://harshanawana.pages.dev).
-# Getting Started with Create React App
+# Portfolio Website - Harsha Nawana
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, responsive portfolio website showcasing the work and skills of Harsha Nawana, a fullstack developer from Nikaweratiya, Sri Lanka. Built with React and featuring smooth animations, interactive project galleries, and a functional contact form.
 
-## Available Scripts
+🌐 **Live Site:** [https://harshanawana.pages.dev](https://harshanawana.pages.dev)
 
-In the project directory, you can run:
+## 📋 Table of Contents
 
-### `npm start`
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Project Structure](#project-structure)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Project Sections](#project-sections)
+- [Configuration](#configuration)
+- [Deployment](#deployment)
+- [Contributing](#contributing)
+- [License](#license)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## ✨ Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Responsive Design**: Fully responsive layout that works seamlessly on desktop, tablet, and mobile devices
+- **Smooth Animations**: Beautiful animations powered by Framer Motion
+- **Interactive Project Galleries**: Showcase projects with carousel navigation for Web, App, UI/UX, and Graphic Design categories
+- **Contact Form**: Functional contact form integrated with EmailJS for direct email communication
+- **Smooth Scrolling**: Seamless navigation between sections using react-scroll
+- **Modern UI/UX**: Clean, professional design with engaging visual elements
+- **Performance Optimized**: Built with React best practices for optimal performance
 
-### `npm test`
+## 🛠 Technologies Used
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Core Technologies
+- **React** (v18.3.1) - UI library
+- **React DOM** (v18.3.1) - React rendering
+- **React Scripts** (v5.0.1) - Build tooling
 
-### `npm run build`
+### Libraries & Tools
+- **Framer Motion** (v11.2.6) - Animation library for smooth transitions
+- **React Scroll** (v1.9.0) - Smooth scrolling navigation
+- **React CountUp** (v6.5.3) - Animated number counting
+- **EmailJS** (@emailjs/browser v4.3.3) - Email service integration
+- **Appwrite** (v14.0.1) - Backend-as-a-Service (optional)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Development Tools
+- **ESLint** - Code linting
+- **Web Vitals** (v2.1.4) - Performance monitoring
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 📁 Project Structure
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+Harsha_Nawana/
+├── public/
+│   ├── favicon.ico
+│   ├── index.html
+│   ├── manifest.json
+│   └── robots.txt
+├── src/
+│   ├── assets/              # Images, icons, and media files
+│   ├── components/          # React components
+│   │   ├── About/           # About section component
+│   │   ├── Contact/         # Contact form component
+│   │   ├── Footer/          # Footer component
+│   │   ├── Header/          # Navigation header
+│   │   ├── Hero/            # Hero/landing section
+│   │   ├── Projects/        # Project showcase components
+│   │   │   ├── ProjectA.jsx    # App projects
+│   │   │   ├── ProjectG.jsx    # Graphic design projects
+│   │   │   ├── ProjectU.jsx    # UI/UX projects
+│   │   │   └── ProjectW.jsx    # Web projects
+│   │   ├── Reasons/         # Why choose me section
+│   │   └── Services/        # Services section
+│   ├── data/                # Data files for projects and content
+│   │   ├── aboutData.js
+│   │   ├── appData.js
+│   │   ├── graphicData.js
+│   │   ├── uiData.js
+│   │   └── webData.js
+│   ├── App.js               # Main App component
+│   ├── App.css              # Global app styles
+│   ├── index.js             # Entry point
+│   └── index.css            # Global styles
+├── package.json
+├── .gitignore
+└── README.md
+```
 
-### `npm run eject`
+## 🚀 Installation
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Prerequisites
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **Node.js** (v14 or higher recommended)
+- **npm** (v6 or higher) or **yarn**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Steps
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. **Clone the repository**
+   ```bash
+   git clone <repository-url>
+   cd Harsha_Nawana
+   ```
 
-## Learn More
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+   or
+   ```bash
+   yarn install
+   ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+3. **Configure EmailJS** (Optional - for contact form)
+   
+   The contact form uses EmailJS. To set it up:
+   - Create an account at [EmailJS](https://www.emailjs.com/)
+   - Get your Service ID, Template ID, and Public Key
+   - Update the values in `src/components/Contact/Contact.jsx`:
+     ```javascript
+     emailjs.sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", form.current, {
+       publicKey: "YOUR_PUBLIC_KEY",
+     })
+     ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 💻 Usage
 
-### Code Splitting
+### Development Mode
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Start the development server:
 
-### Analyzing the Bundle Size
+```bash
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+The application will open at [http://localhost:3000](http://localhost:3000) in your browser. The page will automatically reload when you make changes.
 
-### Making a Progressive Web App
+### Build for Production
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Create an optimized production build:
 
-### Advanced Configuration
+```bash
+npm run build
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+This creates a `build` folder with optimized files ready for deployment.
 
-### Deployment
+### Run Tests
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+```bash
+npm test
+```
 
-### `npm run build` fails to minify
+Launches the test runner in interactive watch mode.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 📄 Project Sections
+
+### 1. **Hero Section**
+- Introduction and tagline
+- Animated statistics (Websites, Apps, Graphic Designs)
+- Call-to-action buttons
+- Hero image with animations
+
+### 2. **About Section**
+Showcases four main service categories:
+- **App Development**: React Native mobile applications
+- **Web Development**: ReactJS single-page applications
+- **UI/UX Design**: Figma-based interface design
+- **Graphic Design**: Photoshop and Illustrator work
+
+### 3. **Reasons Section**
+Highlights qualifications and skills:
+- BICT(HONS) Graduate
+- Certified courses
+- Project experience
+- Software proficiency (Photoshop, Illustrator, MS Office, Figma)
+
+### 4. **Projects Sections**
+Four separate project galleries:
+- **Web Projects**: Restaurant website, Portfolio, Sport Management Site
+- **App Projects**: Mobile application showcases
+- **UI/UX Projects**: Design portfolio
+- **Graphic Design Projects**: Creative work gallery
+
+Each project section includes:
+- Project images
+- Descriptions
+- Technologies used
+- Live project links
+- Carousel navigation
+
+### 5. **Contact Section**
+- Contact information display
+- Functional contact form
+- Email integration via EmailJS
+- Location and contact details
+
+### 6. **Footer**
+- Additional links and information
+- Social media links (if applicable)
+
+## ⚙️ Configuration
+
+### Customizing Content
+
+Update project data in the `src/data/` directory:
+- `webData.js` - Web development projects
+- `appData.js` - Mobile app projects
+- `uiData.js` - UI/UX design projects
+- `graphicData.js` - Graphic design projects
+- `aboutData.js` - About section content
+
+### Styling
+
+Each component has its own CSS file in the component directory. Global styles are in:
+- `src/index.css` - Global styles
+- `src/App.css` - App-level styles
+
+### Navigation
+
+Navigation links are configured in `src/components/Header/Header.jsx` using react-scroll for smooth section navigation.
+
+## 🚢 Deployment
+
+### Deploy to Cloudflare Pages
+
+The site is currently deployed on Cloudflare Pages. To deploy:
+
+1. Build the project:
+   ```bash
+   npm run build
+   ```
+
+2. Deploy the `build` folder to your hosting service
+
+### Other Deployment Options
+
+- **Netlify**: Connect your repository or drag-and-drop the `build` folder
+- **Vercel**: Connect your Git repository for automatic deployments
+- **GitHub Pages**: Use `gh-pages` package or GitHub Actions
+
+## 📝 Available Scripts
+
+- `npm start` - Runs the app in development mode
+- `npm run build` - Creates production build
+- `npm test` - Launches test runner
+- `npm run eject` - Ejects from Create React App (irreversible)
+
+## 🎨 Design Features
+
+- Modern gradient backgrounds
+- Smooth scroll animations
+- Interactive hover effects
+- Responsive mobile menu
+- Animated counters
+- Image carousels with transitions
+- Professional color scheme
+
+## 📧 Contact Information
+
+- **Email**: harshanawana@gmail.com
+- **Phone**: +9476-1646525 / +9472-5172343
+- **Location**: Nikaweratiya, Sri Lanka
+
+## 🔧 Troubleshooting
+
+### Common Issues
+
+1. **EmailJS not working**: Ensure you've configured the correct Service ID, Template ID, and Public Key in the Contact component.
+
+2. **Build fails**: Clear `node_modules` and reinstall:
+   ```bash
+   rm -rf node_modules package-lock.json
+   npm install
+   ```
+
+3. **Animations not working**: Ensure Framer Motion is properly installed and imported.
+
+## 🤝 Contributing
+
+This is a personal portfolio project. If you'd like to suggest improvements or report issues, please feel free to open an issue or submit a pull request.
+
+## 📄 License
+
+This project is private and personal. All rights reserved.
+
+## 🙏 Acknowledgments
+
+- Built with [Create React App](https://github.com/facebook/create-react-app)
+- Animations powered by [Framer Motion](https://www.framer.com/motion/)
+- Email service by [EmailJS](https://www.emailjs.com/)
+
+---
+
+**Developed with ❤️ by Harsha Nawana**
